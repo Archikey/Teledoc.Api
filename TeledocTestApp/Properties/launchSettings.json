@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://teledoctestapp.dev.localhost:17294;http://teledoctestapp.dev.localhost:15182",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_ENVIRONMENT": "Development",
+        "ASPIRE_DASHBOARD_OTLP_ENDPOINT_URL": "https://localhost:21123",
+        "ASPIRE_DASHBOARD_MCP_ENDPOINT_URL": "https://localhost:23163",
+        "ASPIRE_RESOURCE_SERVICE_ENDPOINT_URL": "https://localhost:22144"
+      }
+    },
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://teledoctestapp.dev.localhost:15182",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_ENVIRONMENT": "Development",
+        "ASPIRE_DASHBOARD_OTLP_ENDPOINT_URL": "http://localhost:19023",
+        "ASPIRE_DASHBOARD_MCP_ENDPOINT_URL": "http://localhost:18151",
+        "ASPIRE_RESOURCE_SERVICE_ENDPOINT_URL": "http://localhost:20019"
+      }
+    }
+  }
+}
