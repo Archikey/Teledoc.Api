@@ -1,3 +1,8 @@
+using Teledoc.ApiServices.DataBase.Context;
+using Microsoft.EntityFrameworkCore;
+using Teledoc.ApiServices.Validators.Interfaces;
+using Teledoc.ApiServices.Validators.Realisations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -18,6 +23,15 @@ builder.Services.AddOpenApi("v1", options =>
         return Task.CompletedTask;
     });
 });
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("redis");
+});
+
+builder.Services.AddDbContext<AppDbContext>(o =>
+    o.UseNpgsql(builder.Configuration.GetConnectionString("partnerpaneldb")));
+
+builder.Services.AddSingleton<IInnValidator, InnValidator>();
 
 var app = builder.Build();
 

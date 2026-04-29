@@ -1,19 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Teledoc.ApiServices.DataBase.Entities;
 
 namespace Teledoc.ApiServices.DataBase.Context
 {
-    /// <summary>
-    /// Контекст базы данных приложения
-    /// </summary>
     public class AppDbContext : DbContext
     {
-        /// <summary>
-        /// Инициализирует новый экземпляр контекста базы данных
-        /// </summary>
-        /// <param name="options">Параметры конфигурации DbContext</param>
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+
+        }
+
+        public DbSet<Founder> Founders { get; set; }
     }
 }
