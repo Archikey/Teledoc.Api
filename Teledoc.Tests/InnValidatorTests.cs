@@ -28,7 +28,7 @@ namespace Teledoc.Tests
             Assert.True(result);
             Assert.True(result2);
         }
-
+        [Fact]
         public void IsNotCorrectINN()
         {
             var INN1 = "111111111111";

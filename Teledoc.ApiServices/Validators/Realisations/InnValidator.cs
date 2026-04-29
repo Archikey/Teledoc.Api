@@ -11,7 +11,8 @@ namespace Teledoc.ApiServices.Validators.Realisations
                 return false;
 
             inn = inn.Trim();
-
+            if (inn.Distinct().Count() == 1)
+                return false;
             if (inn.Length != 12)
                 return false;
 
