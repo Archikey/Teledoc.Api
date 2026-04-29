@@ -3,16 +3,8 @@
 namespace Teledoc.ApiServices.Validators.Realisations
 {
 
-    /// <summary>
-    /// Класс валидатора
-    /// </summary>
     public sealed class InnValidator : IInnValidator
     {
-        /// <summary>
-        /// Реализация валидатора Индивидуального номера налого плательщика
-        /// </summary>
-        /// <param name="inn">Номер ИНН</param>
-        /// <returns>Возращет true или false</returns>
         public bool IsValidIndividualInn(string inn)
         {
             if (string.IsNullOrWhiteSpace(inn))

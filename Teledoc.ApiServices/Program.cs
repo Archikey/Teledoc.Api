@@ -29,7 +29,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
 });
 
 builder.Services.AddDbContext<AppDbContext>(o =>
-    o.UseNpgsql(builder.Configuration.GetConnectionString("partnerpaneldb")));
+    o.UseNpgsql(builder.Configuration.GetConnectionString("data-base")));
 
 builder.Services.AddSingleton<IInnValidator, InnValidator>();
 
@@ -45,6 +45,12 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/openapi/v1.json", "Teldoc Api Services");
         options.RoutePrefix = "swagger";
     });
+
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        dbContext.Database.Migrate();
+    }
 }
 
 app.UseHttpsRedirection();
