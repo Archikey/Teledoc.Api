@@ -17,15 +17,15 @@ builder.Services.AddOpenApi("v1", options =>
 {
     options.AddDocumentTransformer((document, context, cancellationToken) =>
     {
-        document.Info.Title = "Teldoc Api Services";
+        document.Info.Title = "Teledoc API Services";
         document.Info.Version = "1.0.0";
-        document.Info.Description = "Teldoc API Services test task";
+        document.Info.Description = "Teledoc API Services test task";
         return Task.CompletedTask;
     });
 });
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.Configuration = builder.Configuration.GetConnectionString("redis");
+    options.Configuration = builder.Configuration.GetConnectionString("redis-cash");
 });
 
 builder.Services.AddDbContext<AppDbContext>(o =>
