@@ -1,4 +1,4 @@
-﻿namespace MessageLibrary
+﻿namespace Teledoc.ApiServices.DTO.Responses
 {
     public sealed class MessageResponse<T>
     {

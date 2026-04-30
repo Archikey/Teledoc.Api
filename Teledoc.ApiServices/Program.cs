@@ -2,6 +2,8 @@ using Teledoc.ApiServices.DataBase.Context;
 using Microsoft.EntityFrameworkCore;
 using Teledoc.ApiServices.Validators.Interfaces;
 using Teledoc.ApiServices.Validators.Realisations;
+using Teledoc.ApiServices.Repositorys.Interfaces;
+using Teledoc.ApiServices.Repositorys.Realization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +34,7 @@ builder.Services.AddDbContext<AppDbContext>(o =>
     o.UseNpgsql(builder.Configuration.GetConnectionString("data-base")));
 
 builder.Services.AddSingleton<IInnValidator, InnValidator>();
+builder.Services.AddScoped<IClientRepository, ClientRepository>();
 
 var app = builder.Build();
 
