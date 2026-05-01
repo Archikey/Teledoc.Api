@@ -4,7 +4,7 @@ using Teledoc.ApiServices.Validators;
 
 namespace Teledoc.ApiServices.DTO.Requests
 {
-    public sealed class ClientDto
+    public sealed class ClientRequests
     {
         [Required]
         [StringLength(100)]
@@ -18,7 +18,7 @@ namespace Teledoc.ApiServices.DTO.Requests
         [EnumDataType(typeof(ClientType))]
         public ClientType TypeRole { get; set; }
 
-        public List<FounderDto> Founders { get; set; } = [];
+        public List<FounderRequests> Founders { get; set; } = [];
     }
 
     public enum ClientType

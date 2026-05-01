@@ -3,7 +3,7 @@ using Teledoc.ApiServices.Validators;
 
 namespace Teledoc.ApiServices.DTO.Requests
 {
-    public sealed class FounderDto
+    public sealed class FounderRequests
     {
 
         [Required]
