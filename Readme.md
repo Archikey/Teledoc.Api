@@ -223,7 +223,6 @@ dotnet run --project TeledocTestApp
 
 - API
 - PostgreSQL
-- Redis
 - Aspire Dashboard
 
 ### 6. Открыть Swagger
