@@ -28,7 +28,7 @@ namespace Teledoc.ApiServices.DataBase.Context
 
                 entity.Property(x => x.TypeRole)
                     .IsRequired()
-                    .HasColumnType("varchar(20)");
+                    .HasColumnType("varchar(30)");
 
                 entity.Property(x => x.CreatedAt)
                     .IsRequired();

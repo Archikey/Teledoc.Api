@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="../ServiceDefaults/ServiceDefaults.csproj" Id="c8e614a3-38df-4d5f-8ead-e816123c8766" />
   <Project Path="../Teledoc.ApiServices/Teledoc.ApiServices.csproj" />
   <Project Path="../Teledoc.Tests/Teledoc.Tests.csproj" Id="2f57854b-fdab-458b-b316-0058b08d4701" />
   <Project Path="TeledocTestApp.csproj" />

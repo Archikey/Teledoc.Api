@@ -80,9 +80,9 @@ namespace Teledoc.ApiServices.Services.Realization
                     false,
                     "The client was not created");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                _logger.LogError("A server error has occurred while creating client");
+                _logger.LogError($"A server error has occurred while creating client {ex}");
 
                 return CreateInforamtionMessage(
                     null!,
