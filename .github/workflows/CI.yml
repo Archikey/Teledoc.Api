@@ -2,7 +2,7 @@ name: publish
 
 on:
   push:
-    branches: ["development"]
+    branches: ["master"]
 
 jobs:
   build-and-test:
