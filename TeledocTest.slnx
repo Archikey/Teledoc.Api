@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Teledoc.ApiServices/Teledoc.ApiServices.csproj" />
+  <Project Path="Teledoc.Tests/Teledoc.Tests.csproj" />
+</Solution>

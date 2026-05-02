@@ -1,6 +1,13 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var serverMain = builder.AddProject<Projects.Teledoc_ApiServices>("server-main");
+
+var postgres = builder.AddPostgres("data-base")
+    .WithDataVolume();
+
+var serverMain = builder.AddProject<Projects.Teledoc_ApiServices>("server-main")
+    .WithReference(postgres)
+    .WaitFor(postgres);
 
 
 builder.Build().Run();
+
