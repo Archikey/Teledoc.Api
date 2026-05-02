@@ -4,6 +4,8 @@ using Teledoc.ApiServices.Validators.Interfaces;
 using Teledoc.ApiServices.Validators.Realisations;
 using Teledoc.ApiServices.Repositorys.Interfaces;
 using Teledoc.ApiServices.Repositorys.Realization;
+using Teledoc.ApiServices.Services.Interfaces;
+using Teledoc.ApiServices.Services.Realization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +37,7 @@ builder.Services.AddDbContext<AppDbContext>(o =>
 
 builder.Services.AddSingleton<IInnValidator, InnValidator>();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IManagerService, ManagerService>();
 
 var app = builder.Build();
 
