@@ -26,7 +26,7 @@ namespace Teledoc.Tests
             _mockLoggerManagerService = new Mock<ILogger<ManagerService>>();
             _mockLoggerClientRepository = new Mock<ILogger<ClientRepository>>();
             var options = new DbContextOptionsBuilder<AppDbContext>()
-                    .UseInMemoryDatabase(databaseName: "TestDb")
+                    .UseInMemoryDatabase(databaseName: "TestDb2")
                     .Options;
 
             _appDbContext = new AppDbContext(options);
