@@ -27,10 +27,7 @@ builder.Services.AddOpenApi("v1", options =>
         return Task.CompletedTask;
     });
 });
-builder.Services.AddStackExchangeRedisCache(options =>
-{
-    options.Configuration = builder.Configuration.GetConnectionString("redis-cash");
-});
+
 
 builder.Services.AddDbContext<AppDbContext>(o =>
     o.UseNpgsql(builder.Configuration.GetConnectionString("data-base")));

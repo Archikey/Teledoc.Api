@@ -2,17 +2,17 @@
 using Teledoc.ApiServices.DTO.Requests;
 using Teledoc.ApiServices.DTO.Responses;
 using Teledoc.ApiServices.Repositorys.Interfaces;
-using Teledoc.ApiServices.Repositorys.Realization;
+
 using Teledoc.ApiServices.Services.Interfaces;
 
 namespace Teledoc.ApiServices.Services.Realization
 {
     public class ManagerService : IManagerService
     {
-        private readonly ClientRepository _clientRepository;
+        private readonly IClientRepository _clientRepository;
         private readonly ILogger<ManagerService> _logger;
 
-        public ManagerService(ILogger<ManagerService> logger, ClientRepository clientRepository)
+        public ManagerService(ILogger<ManagerService> logger, IClientRepository clientRepository)
         {
             _clientRepository = clientRepository;
             _logger = logger;

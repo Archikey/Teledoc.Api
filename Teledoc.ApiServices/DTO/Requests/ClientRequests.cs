@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Teledoc.ApiServices.DataBase.Entities;
 using Teledoc.ApiServices.Validators;
 
 namespace Teledoc.ApiServices.DTO.Requests

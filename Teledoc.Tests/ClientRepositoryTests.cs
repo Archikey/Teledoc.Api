@@ -1,12 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Teledoc.ApiServices.DataBase.Context;
 using Teledoc.ApiServices.DataBase.Entities;
-using Teledoc.ApiServices.DTO.Requests;
 using Teledoc.ApiServices.Repositorys.Realization;
 
 namespace Teledoc.Tests
